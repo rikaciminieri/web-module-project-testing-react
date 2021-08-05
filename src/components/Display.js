@@ -23,6 +23,7 @@ const Display = (props) => {
         
     const handleSelect = e => {
         setSelectedSeason(e.target.value);
+        console.log(e.target.value)
     };
 
     return (
