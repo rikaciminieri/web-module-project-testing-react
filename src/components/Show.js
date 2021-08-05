@@ -26,7 +26,7 @@ const Show = (props) => {
         {
             (selectedSeason !== "none") && <Episodes episodes={show.seasons[selectedSeason].episodes} />
         }
-    </div>);
+    </div>)
 }
 
 export default Show;

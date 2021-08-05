@@ -49,8 +49,10 @@ test("component renders when no seasons are selected and when rerenders with a s
   const episodes = screen.queryByTestId("episodes-container");
   expect(episodes).toBe(null);
   rerender(<Show show={testShow} selectedSeason={1} />);
-  expect(episodes).not.toBeNull;
-  
+  const episodeWithSeason = screen.getByTestId("episodes-container")
+  expect(episodeWithSeason).not.toBeNull;
+  expect(episodeWithSeason).toBeInTheDocument();
+  screen.debug();
 });
 
 //Tasks:
